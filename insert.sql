@@ -25,14 +25,16 @@ VALUES ('album 1', 2015),
 	   ('album 2', 2018),
 	   ('album 3', 2019),
 	   ('album 4', 2021),
-	   ('album 5', 2020);
+	   ('album 5', 2020),
+	   ('album 6', 2020);
 	  
 INSERT INTO artist_albums(artist_id, album_id)
 VALUES (1, 4),
 	   (2, 2),
 	   (3, 1),
 	   (4, 3),
-	   (1, 5);
+	   (1, 5),
+	   (1, 6);
 	  
 INSERT INTO collection(collection_name, year)
 VALUES ('collection 1', 2018),
@@ -50,7 +52,8 @@ VALUES ('soundtrack 1', 150, 1),
 	   ('soundtrack 5', 290, 4),
 	   ('soundtrack 6', 208, 4),
 	   ('soundtrack 7', 135, 5),
-	   ('soundtrack 8', 230, 5);
+	   ('soundtrack 8', 230, 5),
+	   ('soundtrack 9', 200, 6);
 
 INSERT INTO soundtrack_collections(soundtrack_id, collection_id)
 VALUES (1, 1),
