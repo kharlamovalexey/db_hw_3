@@ -83,7 +83,7 @@ where a_a.artist_id IN (SELECT a_g.artist_id
 						HAVING count(a_g.genre_id)>1);
 
 --2. Наименования треков, которые не входят в сборники.
-SELECT *
+SELECT s.soundtrack_name
 FROM soundtrack s
 LEFT JOIN soundtrack_collections s_c 
 ON s.soundtrack_id = s_c.soundtrack_id 
