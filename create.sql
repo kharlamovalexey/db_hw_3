@@ -24,23 +24,23 @@ CREATE TABLE IF NOT EXISTS soundtrack(
     soundtrack_id SERIAL PRIMARY KEY,
     soundtrack_name VARCHAR(150) NOT NULL,
     duration TIME, 
-    album_id INTEGER REFERENCES Album(album_id)
+    album_id INTEGER REFERENCES album(album_id)
 );
 
 CREATE TABLE IF NOT EXISTS artist_albums(
-    artist_id INTEGER REFERENCES Artist(artist_id),
-    album_id INTEGER REFERENCES Album(album_id),
+    artist_id INTEGER REFERENCES artist(artist_id),
+    album_id INTEGER REFERENCES album(album_id),
     CONSTRAINT artist_albums_pk PRIMARY KEY (artist_id, album_id)
 );
 
 CREATE TABLE IF NOT EXISTS artist_genres(
-    artist_id INTEGER REFERENCES Artist(artist_id),
-    genre_id INTEGER REFERENCES Genre(genre_id),
+    artist_id INTEGER REFERENCES artist(artist_id),
+    genre_id INTEGER REFERENCES genre(genre_id),
     CONSTRAINT artist_genres_pk PRIMARY KEY (artist_id, genre_id)
 );
 
 CREATE TABLE IF NOT EXISTS soundtrack_collections(
-    soundtrack_id INTEGER REFERENCES Soundtrack(soundtrack_id),
-    collection_id INTEGER REFERENCES Collection(collection_id),
+    soundtrack_id INTEGER REFERENCES soundtrack(soundtrack_id),
+    collection_id INTEGER REFERENCES collection(collection_id),
     CONSTRAINT soundtrack_collections_pk PRIMARY KEY (soundtrack_id, collection_id)
 );
