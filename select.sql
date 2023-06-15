@@ -69,5 +69,5 @@ INNER JOIN artist_albums ar_al
 ON ar_al.album_id  = al.album_id 
 INNER JOIN artist a
 ON a.artist_id =ar_al.artist_id 
-where a.artist_name = 'Some Artist'
+where a.artist_name = 'Some Artist';
 
